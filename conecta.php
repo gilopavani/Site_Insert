@@ -1,8 +1,8 @@
 <?php
-$host = 'us-cdbr-east-05.cleardb.net:3306';
-$tabela = "heroku_3166029c31857d1";
-$usuario = "b7ee025ae16aa3";
-$senha = "3a697031";
+$host = 'sql10.freemysqlhosting.net';
+$tabela = "sql10471383";
+$usuario = "sql10471383";
+$senha = "XZBAD7LNrR";
 // Create connection
 $link = mysqli_connect ($host, $usuario,$senha, $tabela);
 
