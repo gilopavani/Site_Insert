@@ -9,7 +9,7 @@ $senha = $_POST['senha'];
 echo $usuario,$senha;
 */
 
-include('../conecta.php');
+include('./conecta.php');
 
 $usuario = $_POST['usuario'] ;
 $senha = $_POST['senha'];
