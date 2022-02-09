@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$tabela = "lista-os";
-$usuario = "root";
-$senha = "";
+$host = "us-cdbr-east-05.cleardb.net";
+$tabela = "heroku_3166029c31857d1";
+$usuario = "b7ee025ae16aa3";
+$senha = "3a697031";
 // Create connection
 $link = mysqli_connect ($host, $usuario,$senha, $tabela);
 
