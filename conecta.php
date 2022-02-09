@@ -1,5 +1,5 @@
 <?php
-$host = "us-cdbr-east-05.cleardb.net";
+$host = 'us-cdbr-east-05.cleardb.net:3306';
 $tabela = "heroku_3166029c31857d1";
 $usuario = "b7ee025ae16aa3";
 $senha = "3a697031";
