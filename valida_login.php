@@ -9,7 +9,7 @@ $senha = $_POST['senha'];
 echo $usuario,$senha;
 */
 
-include('../conecta.php');
+include('./conecta.php');
 
 $usuario = $_POST['usuario'] ;
 $senha = $_POST['senha'];
@@ -36,7 +36,7 @@ echo $row;
 
 if($row == 1) {
 	$_SESSION['usuario'] = $usuario;
-	header('Location: ../index.php');
+	header('Location: ./tabela/tabela.php');
 	exit();
 } else {
 	$_SESSION['nao_autenticado'] = true;
