@@ -1,5 +1,5 @@
 <?php
-	include'conecta.php';
+	include'../conecta.php';
  
 	$consulta = "SELECT * FROM os";
 
@@ -51,12 +51,12 @@
 		<nav class="main-nav">
 		  <ul>
 			<li>
-			  <a href="#">
+			  <a href="index.php">
 				O.S. Aberta
 			  </a>
 			</li>
 			<li>
-			  <a href="./Inserir_OS/abriros.html">
+			  <a href="../Inserir_OS/abriros.php">
 				Abrir O.S.
 			  </a>
 			</li>
@@ -68,7 +68,7 @@
 			</li>
 		  </ul>
 		</nav>
-	  </div>
+	</div>
 	  <!--=======================================Menu========================================================-->
 	
 	<div class="limiter">
@@ -111,24 +111,24 @@
 						if($dados["Fechado"] == 1 ){
 							
 						echo '
-						<div class="row"$color>
+						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
 								'.$nome.'
 							</div>
 							<div class="cell" data-title="Age">
-								$numero ;								
+								'.$numero.'								
 							</div>
 							<div class="cell" data-title="Job Title">
-								$status;							
+								'.$status.'							
 							</div>
 							<div class="cell" data-title="Job Title">
-								$previa ;								
+								'.$previa.'								
 							</div>
 							<div class="cell" data-title="Location">
-								$color ;								
+								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = $id role="button">FECHAR OS</button>
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
 							</div>
 						</div>	
 						';

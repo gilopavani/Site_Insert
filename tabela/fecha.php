@@ -1,5 +1,5 @@
 <?php
-include('./conecta.php');
+include('../conecta.php');
 
 $fecha = $_POST['id'] ;
 

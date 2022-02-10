@@ -9,7 +9,7 @@ $senha = $_POST['senha'];
 echo $usuario,$senha;
 */
 
-include('../conecta.php');
+include('conecta.php');
 
 $usuario = $_POST['usuario'] ;
 $senha = $_POST['senha'];
@@ -27,7 +27,7 @@ $usuario = mysqli_real_escape_string($link, $_POST['usuario']);
 $senha = mysqli_real_escape_string($link, $_POST['senha']);
 
 echo $usuario;
-$query = "SELECT * FROM `login` WHERE `nome_user` = '$usuario' AND `senha_user` = '$senha'";
+$query = "SELECT * FROM `usuarios` WHERE `Nome_User` = '$usuario' AND `Senha_User` = '$senha'";
 $result = mysqli_query($link, $query);
 echo $query;
 $row = mysqli_num_rows($result);
@@ -36,11 +36,11 @@ echo $row;
 
 if($row == 1) {
 	$_SESSION['usuario'] = $usuario;
-	header('Location: ../index.php');
+	header('Location: /tabela/index.php');
 	exit();
 } else {
 	$_SESSION['nao_autenticado'] = true;
-	header('Location: login.php');
+	header('Location: index.php');
 	exit();
 }
 

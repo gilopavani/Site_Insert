@@ -1,6 +1,7 @@
 <?php
-	include('./conecta.php');
-
+	include('conecta.php');
+	
+	
 ?>
 
 <!DOCTYPE html>
@@ -49,12 +50,12 @@
 		<nav class="main-nav">
 		  <ul>
 			<li>
-			  <a href="./tabela/tabela.php">
+			  <a href="tabela/index.php">
 				O.S. Aberta
 			  </a>
 			</li>
 			<li>
-			  <a href="./Inserir_OS/abriros.php">
+			  <a href="Inserir_OS/abriros.html">
 				Abrir O.S.
 			  </a>
 			</li>

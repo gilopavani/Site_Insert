@@ -1,7 +1,16 @@
+<?php
+	include'../conecta.php';
+ 
+	$consulta = "SELECT * FROM os";
+
+	$con = $link->query($consulta) or die ($link->error);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Table V02</title>
+	<title>Tabela</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -42,12 +51,12 @@
 		<nav class="main-nav">
 		  <ul>
 			<li>
-			  <a href="#">
+			  <a href="index.php">
 				O.S. Aberta
 			  </a>
 			</li>
 			<li>
-			  <a href="./Inserir_OS/abriros.html">
+			  <a href="../Inserir_OS/abriros.html">
 				Abrir O.S.
 			  </a>
 			</li>
@@ -59,12 +68,13 @@
 			</li>
 		  </ul>
 		</nav>
-	  </div>
+	</div>
 	  <!--=======================================Menu========================================================-->
 	
 	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
+					<form action = "fecha.php" method="POST">
 					<div class="table">
 
 						<div class="row header">
@@ -87,115 +97,50 @@
 								Fechamento
 							</div>
 						</div>
-
-						<div class="row">
-							<div class="cell" data-title="Full Name">
-								Angelo Pavani
-							</div>
-							<div class="cell" data-title="Age">
-								10652
-							</div>
-							<div class="cell" data-title="Job Title">
-								Notebook
-							</div>
-							<div class="cell" data-title="Location">
-								Orçado
-							</div>
-							<div class="cell" data-title="Location">
-								Baixa
-							</div>
-							<div class="cell">
-								<button class="button-9" role="button">FECHAR OS</button>
-							</div>
-						</div>
-
-						<div class="row1">
-							<div class="cell" data-title="Full Name">
-								Angelo Pavani
-							</div>
-							<div class="cell" data-title="Age">
-								10652
-							</div>
-							<div class="cell" data-title="Job Title">
-								Notebook
-							</div>
-							<div class="cell" data-title="Location">
-								Orçado
-							</div>
-							<div class="cell" data-title="Location">
-								Baixa
-							</div>
-							<div class="cell">
-								<button class="button-9" role="button">FECHAR OS</button>
-							</div>
-						</div>
-
-						<div class="row2">
-							<div class="cell" data-title="Full Name">
-								Angelo Pavani
-							</div>
-							<div class="cell" data-title="Age">
-								10652
-							</div>
-							<div class="cell" data-title="Job Title">
-								Notebook
-							</div>
-							<div class="cell" data-title="Location">
-								Orçado
-							</div>
-							<div class="cell" data-title="Location">
-								Baixa
-							</div>
-							<div class="cell">
-								<button class="button-9" role="button">FECHAR OS</button>
-							</div>
-						</div>
-
-						<div class="row3">
-							<div class="cell" data-title="Full Name">
-								Angelo Pavani
-							</div>
-							<div class="cell" data-title="Age">
-								10652
-							</div>
-							<div class="cell" data-title="Job Title">
-								Notebook
-							</div>
-							<div class="cell" data-title="Location">
-								Orçado
-							</div>
-							<div class="cell" data-title="Location">
-								Baixa
-							</div>
-							<div class="cell">
-								<button class="button-9" role="button">FECHAR OS</button>
-							</div>
-						</div>
-
-						<div class="row4">
-							<div class="cell" data-title="Full Name">
-								Angelo Pavani
-							</div>
-							<div class="cell" data-title="Age">
-								10652
-							</div>
-							<div class="cell" data-title="Job Title">
-								Notebook
-							</div>
-							<div class="cell" data-title="Location">
-								Orçado
-							</div>
-							<div class="cell" data-title="Location">
-								Baixa
-							</div>
-							<div class="cell">
-								<button class="button-9" role="button">FECHAR OS</button>
-							</div>
-						</div>
-
 						
-
+						<?php
+						while($dados = $con->fetch_array()){
+							$nome = $dados["Nome"] ;
+							$numero = $dados["numero_os"] ;
+							$status= $dados["status"] ;
+							$previa= $dados["previa"] ; 
+							$color = $dados["color"] ;
+							$id = $dados["id"];
+						
+						
+						if($dados["Fechado"] == 1 ){
+							
+						echo '
+						<div class="row'.$color.'">
+							<div class="cell" data-title="Full Name">
+								'.$nome.'
+							</div>
+							<div class="cell" data-title="Age">
+								'.$numero.'								
+							</div>
+							<div class="cell" data-title="Job Title">
+								'.$status.'							
+							</div>
+							<div class="cell" data-title="Job Title">
+								'.$previa.'								
+							</div>
+							<div class="cell" data-title="Location">
+								'.$color.'								
+							</div>
+							<div class="cell">
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+							</div>
+						</div>	
+						';
+						
+						}
+						
+						
+						}
+						?>
+						
 					</div>
+					</form>
 			</div>
 		</div>
 	</div>
