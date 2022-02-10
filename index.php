@@ -45,29 +45,7 @@
 </head>
 <body>
 	<!--=========================Menu======================================================================-->
-	
-	<div id="menu" class="">
-		<nav class="main-nav">
-		  <ul>
-			<li>
-			  <a href="tabela/index.php">
-				O.S. Aberta
-			  </a>
-			</li>
-			<li>
-			  <a href="Inserir_OS/abriros.html">
-				Abrir O.S.
-			  </a>
-			</li>
-			
-			<li>
-			  <a href="../index.php">
-				Sair
-			  </a>
-			</li>
-		  </ul>
-		</nav>
-	  </div>
+
 	  <!--=======================================Menu========================================================-->
 	
 	

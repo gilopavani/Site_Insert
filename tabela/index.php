@@ -62,7 +62,7 @@
 			</li>
 			
 			<li>
-			  <a href="#">
+			  <a href="../index.php">
 				Sair
 			  </a>
 			</li>
