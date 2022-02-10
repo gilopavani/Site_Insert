@@ -1,7 +1,13 @@
+<?php
+	include('conecta.php');
+	
+	
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Abertura OS</title>
+	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -39,35 +45,23 @@
 </head>
 <body>
 	<!--=========================Menu======================================================================-->
-	<script>
-	
-	Swal.fire({
-		position: 'top-center',
-		icon: 'success',
-		title: 'Salvo com Sucesso',
-		showConfirmButton: false,
-		timer: 3500
-	})
-	
-
-	</script>
 	
 	<div id="menu" class="">
 		<nav class="main-nav">
 		  <ul>
 			<li>
-			  <a href="../tabela/index.php">
+			  <a href="tabela/index.php">
 				O.S. Aberta
 			  </a>
 			</li>
 			<li>
-			  <a href="abriros.html">
+			  <a href="Inserir_OS/abriros.html">
 				Abrir O.S.
 			  </a>
 			</li>
 			
 			<li>
-			  <a href="../index">
+			  <a href="#">
 				Sair
 			  </a>
 			</li>
@@ -80,45 +74,27 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-t-50 p-b-90">
-				<form class="login100-form validate-form flex-sb flex-w" action = "inserir.php" method="POST">
-					<span class="login100-form-title p-b-51" >
-						ABRIR OS
+				<form class="login100-form validate-form flex-sb flex-w" action = "valida_login.php" method="POST">
+					<span class="login100-form-title p-b-51">
+						Entrar
 					</span>
 
 					
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Nome Cliente é necessário">
-						<input class="input100" type="text" name="nome" placeholder="Cliente">
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Usuário é necessário">
+						<input class="input100" type="text" name="usuario" placeholder="Usuário">
 						<span class="focus-input100"></span>
 					</div>
-
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Numero OS é necessário">
-						<input class="input100" type="text" name="numero_os" placeholder="Numero OS">
+					
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Senha é necessária">
+						<input class="input100" type="password" name="senha" placeholder="Senha">
 						<span class="focus-input100"></span>
 					</div>
-
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Equipamento é necessário">
-						<input class="input100" type="text" name="equipa" placeholder="Equipamento">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Status é necessário">
-						<input class="input100" type="text" name="status" placeholder="Status">
-						<span class="focus-input100"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input m-b-16" data-validate = "Prioridade é necessário">
-						<select class="input100" type="text" name="prioridade" placeholder="Prioridade">
-							<option value="1" selected>Baixa</option>
-							<option value="3">Alta</option>
-							<option value="4">Urgente</option>
-						</select>
-						<span class="focus-input100"></span>
-					</div>
-									
+					
 
 					<div class="container-login100-form-btn m-t-17">
-						<button class="login100-form-btn" type="submit">
-							Abrir O.S.
+						<button type="submit" class="login100-form-btn">
+							Entrar
 						</button>
 					</div>
 
@@ -148,10 +124,6 @@
 	<script src="js/main.js"></script>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-	
-	<script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	
 	
 
 </body>

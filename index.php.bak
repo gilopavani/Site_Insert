@@ -50,7 +50,7 @@
 		<nav class="main-nav">
 		  <ul>
 			<li>
-			  <a href="tabela/index.html">
+			  <a href="tabela/index.php">
 				O.S. Aberta
 			  </a>
 			</li>
@@ -61,7 +61,7 @@
 			</li>
 			
 			<li>
-			  <a href="#">
+			  <a href="../index">
 				Sair
 			  </a>
 			</li>
