@@ -27,7 +27,7 @@ $usuario = mysqli_real_escape_string($link, $_POST['usuario']);
 $senha = mysqli_real_escape_string($link, $_POST['senha']);
 
 echo $usuario;
-$query = "SELECT * FROM `usuarios` WHERE `Nome_User` = '$usuario' AND `Senha_User` = '$senha'";
+$query = "SELECT * FROM `login` WHERE `nome_user` = '$usuario' AND `senha_user` = '$senha'";
 $result = mysqli_query($link, $query);
 echo $query;
 $row = mysqli_num_rows($result);

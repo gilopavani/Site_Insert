@@ -31,6 +31,8 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css'>
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
 
+
+
 <nav class="nav">
     <button class="toggle-menu">
       <span></span>
@@ -39,18 +41,8 @@
 </head>
 <body>
 	<!--=========================Menu======================================================================-->
-	<script>
-	
-	Swal.fire({
-		position: 'top-center',
-		icon: 'success',
-		title: 'Salvo com Sucesso',
-		showConfirmButton: false,
-		timer: 3500
-	})
 	
 
-	</script>
 	
 	<div id="menu" class="">
 		<nav class="main-nav">
@@ -130,6 +122,9 @@
 
 	<div id="dropDownSelect1"></div>
 	
+	<script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -148,10 +143,6 @@
 	<script src="js/main.js"></script>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
-	
-	<script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-	
 	
 
 </body>
