@@ -37,11 +37,6 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css'>
 <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
 
-<nav class="nav">
-    <button class="toggle-menu">
-      <span></span>
-	</button>
-</nav>
 </head>
 <body>
 	<!--=========================Menu======================================================================-->
