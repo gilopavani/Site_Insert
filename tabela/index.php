@@ -62,7 +62,7 @@
 			</li>
 			
 			<li>
-			  <a href="../index.php">
+			  <a href="#">
 				Sair
 			  </a>
 			</li>
@@ -128,7 +128,7 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
 							</div>
 						</div>	
 						';
