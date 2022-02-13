@@ -5,10 +5,21 @@
 			header('location:../index.php');
 		}
 	include'../conecta.php';
+	include'fil.php';
  
 	$consulta = "SELECT * FROM os";
 
-	$con = $link->query($consulta) or die ($link->error);
+	
+	
+	$consulta = "SELECT * FROM os WHERE `color` = '1'";
+	$consulta2 = "SELECT * FROM os WHERE `color` = '2'";
+	$consulta3 = "SELECT * FROM os WHERE `color` = '3'";
+	$consulta4 = "SELECT * FROM os WHERE `color` = '4'";
+
+	$con = $link->query($consulta) or die ($link->error); 
+	$con2 = $link->query($consulta2) or die ($link->error); 
+	$con3 = $link->query($consulta3) or die ($link->error); 
+	$con4 = $link->query($consulta4) or die ($link->error); 
 
 ?>
 
@@ -102,9 +113,10 @@
 								Fechamento
 							</div>
 						</div>
-						
 						<?php
-						while($dados = $con->fetch_array()){
+						
+						
+						while($dados = $con4->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
 							$status= $dados["status"] ;
@@ -114,7 +126,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							if($color == 4 ){
+							
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -133,19 +145,17 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
 							</div>
+
 						</div>	
+						
 						';
-							}
-						
+							
 						}
-						
-						
+							
 						}
-						?>
-						<?php
-						while($dados = $con->fetch_array()){
+						while($dados = $con3->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
 							$status= $dados["status"] ;
@@ -155,7 +165,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							if($color == 3 ){
+							
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -174,19 +184,17 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
 							</div>
+
 						</div>	
+						
 						';
-							}
-						
+							
 						}
-						
-						
+							
 						}
-						?>
-						<?php
-						while($dados = $con->fetch_array()){
+						while($dados = $con2->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
 							$status= $dados["status"] ;
@@ -196,7 +204,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							if($color == 2 ){
+							
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -215,18 +223,16 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
 							</div>
+
 						</div>	
+						
 						';
-							}
-						
+							
 						}
-						
-						
+							
 						}
-						?>
-						<?php
 						while($dados = $con->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
@@ -237,7 +243,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							if($color == 1 ){
+							
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -256,17 +262,19 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
 							</div>
+
 						</div>	
+						
 						';
-							}
-						
+							
+						}
+							
 						}
 						
+						?>						
 						
-						}
-						?>
 						
 					</div>
 					</form>

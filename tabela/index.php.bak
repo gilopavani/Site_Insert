@@ -5,10 +5,21 @@
 			header('location:../index.php');
 		}
 	include'../conecta.php';
+	include'fil.php';
  
 	$consulta = "SELECT * FROM os";
 
-	$con = $link->query($consulta) or die ($link->error);
+	
+	
+	$consulta = "SELECT * FROM os WHERE `color` = '1'";
+	$consulta2 = "SELECT * FROM os WHERE `color` = '2'";
+	$consulta3 = "SELECT * FROM os WHERE `color` = '3'";
+	$consulta4 = "SELECT * FROM os WHERE `color` = '4'";
+
+	$con = $link->query($consulta) or die ($link->error); 
+	$con2 = $link->query($consulta2) or die ($link->error); 
+	$con3 = $link->query($consulta3) or die ($link->error); 
+	$con4 = $link->query($consulta4) or die ($link->error); 
 
 ?>
 
@@ -67,11 +78,7 @@
 			</li>
 			
 			<li>
-<<<<<<< HEAD
 			  <a href="../sair.php">
-=======
-			  <a href="#">
->>>>>>> 1b73727adc59a70ffe4c8407ccf3ab2b8e0f4c45
 				Sair
 			  </a>
 			</li>
@@ -137,7 +144,7 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
 							</div>
 						</div>	
 						';
