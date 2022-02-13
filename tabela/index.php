@@ -5,7 +5,6 @@
 			header('location:../index.php');
 		}
 	include'../conecta.php';
-	include'fil.php';
  
 	$consulta = "SELECT * FROM os";
 
@@ -72,7 +71,7 @@
 			  </a>
 			</li>
 			<li>
-			  <a href="../Inserir_OS/abriros.html">
+			  <a href="../Inserir_OS/abriros.php">
 				Abrir O.S.
 			  </a>
 			</li>

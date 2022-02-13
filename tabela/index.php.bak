@@ -72,7 +72,7 @@
 			  </a>
 			</li>
 			<li>
-			  <a href="../Inserir_OS/abriros.html">
+			  <a href="../Inserir_OS/abriros.php">
 				Abrir O.S.
 			  </a>
 			</li>
@@ -113,9 +113,10 @@
 								Fechamento
 							</div>
 						</div>
-						
 						<?php
-						while($dados = $con->fetch_array()){
+						
+						
+						while($dados = $con4->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
 							$status= $dados["status"] ;
@@ -125,7 +126,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							if($color == 4 ){
+							
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -144,19 +145,17 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
 							</div>
+
 						</div>	
+						
 						';
-							}
-						
+							
 						}
-						
-						
+							
 						}
-						?>
-						<?php
-						while($dados = $con->fetch_array()){
+						while($dados = $con3->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
 							$status= $dados["status"] ;
@@ -166,7 +165,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							if($color == 3 ){
+							
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -185,19 +184,17 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
 							</div>
+
 						</div>	
+						
 						';
-							}
-						
+							
 						}
-						
-						
+							
 						}
-						?>
-						<?php
-						while($dados = $con->fetch_array()){
+						while($dados = $con2->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
 							$status= $dados["status"] ;
@@ -207,7 +204,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							if($color == 2 ){
+							
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -226,18 +223,16 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
 							</div>
+
 						</div>	
+						
 						';
-							}
-						
+							
 						}
-						
-						
+							
 						}
-						?>
-						<?php
 						while($dados = $con->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
@@ -248,7 +243,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							if($color == 1 ){
+							
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -267,17 +262,19 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
 							</div>
+
 						</div>	
+						
 						';
-							}
-						
+							
+						}
+							
 						}
 						
+						?>						
 						
-						}
-						?>
 						
 					</div>
 					</form>
