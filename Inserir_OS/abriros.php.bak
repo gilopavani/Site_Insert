@@ -42,18 +42,7 @@
 <body>
 	<!--=========================Menu======================================================================-->
 	
-	<script>
-	
-	Swal.fire({
-		position: 'top-center',
-		icon: 'success',
-		title: 'Salvo com Sucesso',
-		showConfirmButton: false,
-		timer: 3500
-	})
-	
 
-	</script>
 	
 	<div id="menu" class="">
 		<nav class="main-nav">
@@ -64,13 +53,13 @@
 			  </a>
 			</li>
 			<li>
-			  <a href="#">
+			   <a href="../Inserir_OS/abriros.php">
 				Abrir O.S.
 			  </a>
 			</li>
 			
 			<li>
-			  <a href="#">
+			   <a href="../sair.php">
 				Sair
 			  </a>
 			</li>
@@ -129,18 +118,7 @@
 			</div>
 		</div>
 	</div>
-	<script>
 	
-	Swal.fire({
-		position: 'top-center',
-		icon: 'success',
-		title: 'Salvo com Sucesso',
-		showConfirmButton: false,
-		timer: 3500
-	})
-	
-
-	</script>
 
 	<div id="dropDownSelect1"></div>
 	

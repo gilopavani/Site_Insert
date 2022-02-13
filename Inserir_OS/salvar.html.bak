@@ -7,7 +7,6 @@
 <meta charset="utf-8">
 <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-icon: 'success'
 </head> 
 <body> 
 
@@ -15,7 +14,7 @@ icon: 'success'
 	
 	Swal.fire({
 		position: 'top-center',
-		icon: 'warning',
+		icon: 'success',
 		title: 'Salvo com Sucesso',
 		showConfirmButton: false,
 		timer: 3500

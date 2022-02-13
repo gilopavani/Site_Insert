@@ -18,7 +18,7 @@ echo $usuario;
 echo $senha;
 
 if(empty($_POST['usuario']) || empty($_POST['senha'])) {
-	header('Location: vazio.php');
+	header('Location: vazio.html');
 	exit();
 }else{
 

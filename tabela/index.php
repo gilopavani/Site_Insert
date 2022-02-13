@@ -1,4 +1,9 @@
 <?php
+	session_start();
+	if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+			header('location:../index.php');
+		}
 	include'../conecta.php';
  
 	$consulta = "SELECT * FROM os";
@@ -62,7 +67,7 @@
 			</li>
 			
 			<li>
-			  <a href="../index.php">
+			  <a href="../sair.php">
 				Sair
 			  </a>
 			</li>
@@ -109,7 +114,7 @@
 						
 						
 						if($dados["Fechado"] == 1 ){
-							
+							if($color == 4 ){
 						echo '
 						<div class="row'.$color.'">
 							<div class="cell" data-title="Full Name">
@@ -132,6 +137,130 @@
 							</div>
 						</div>	
 						';
+							}
+						
+						}
+						
+						
+						}
+						?>
+						<?php
+						while($dados = $con->fetch_array()){
+							$nome = $dados["Nome"] ;
+							$numero = $dados["numero_os"] ;
+							$status= $dados["status"] ;
+							$previa= $dados["previa"] ; 
+							$color = $dados["color"] ;
+							$id = $dados["id"];
+						
+						
+						if($dados["Fechado"] == 1 ){
+							if($color == 3 ){
+						echo '
+						<div class="row'.$color.'">
+							<div class="cell" data-title="Full Name">
+								'.$nome.'
+							</div>
+							<div class="cell" data-title="Age">
+								'.$numero.'								
+							</div>
+							<div class="cell" data-title="Job Title">
+								'.$status.'							
+							</div>
+							<div class="cell" data-title="Job Title">
+								'.$previa.'								
+							</div>
+							<div class="cell" data-title="Location">
+								'.$color.'								
+							</div>
+							<div class="cell">
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+							</div>
+						</div>	
+						';
+							}
+						
+						}
+						
+						
+						}
+						?>
+						<?php
+						while($dados = $con->fetch_array()){
+							$nome = $dados["Nome"] ;
+							$numero = $dados["numero_os"] ;
+							$status= $dados["status"] ;
+							$previa= $dados["previa"] ; 
+							$color = $dados["color"] ;
+							$id = $dados["id"];
+						
+						
+						if($dados["Fechado"] == 1 ){
+							if($color == 2 ){
+						echo '
+						<div class="row'.$color.'">
+							<div class="cell" data-title="Full Name">
+								'.$nome.'
+							</div>
+							<div class="cell" data-title="Age">
+								'.$numero.'								
+							</div>
+							<div class="cell" data-title="Job Title">
+								'.$status.'							
+							</div>
+							<div class="cell" data-title="Job Title">
+								'.$previa.'								
+							</div>
+							<div class="cell" data-title="Location">
+								'.$color.'								
+							</div>
+							<div class="cell">
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+							</div>
+						</div>	
+						';
+							}
+						
+						}
+						
+						
+						}
+						?>
+						<?php
+						while($dados = $con->fetch_array()){
+							$nome = $dados["Nome"] ;
+							$numero = $dados["numero_os"] ;
+							$status= $dados["status"] ;
+							$previa= $dados["previa"] ; 
+							$color = $dados["color"] ;
+							$id = $dados["id"];
+						
+						
+						if($dados["Fechado"] == 1 ){
+							if($color == 1 ){
+						echo '
+						<div class="row'.$color.'">
+							<div class="cell" data-title="Full Name">
+								'.$nome.'
+							</div>
+							<div class="cell" data-title="Age">
+								'.$numero.'								
+							</div>
+							<div class="cell" data-title="Job Title">
+								'.$status.'							
+							</div>
+							<div class="cell" data-title="Job Title">
+								'.$previa.'								
+							</div>
+							<div class="cell" data-title="Location">
+								'.$color.'								
+							</div>
+							<div class="cell">
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR OS</button>
+							</div>
+						</div>	
+						';
+							}
 						
 						}
 						

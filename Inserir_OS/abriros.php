@@ -1,3 +1,16 @@
+<?php
+	session_start();
+	if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+			header('location:../index.php');
+		}
+	include'../conecta.php';
+ 
+	$consulta = "SELECT * FROM os";
+
+	$con = $link->query($consulta) or die ($link->error);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,13 +66,13 @@
 			  </a>
 			</li>
 			<li>
-			  <a href="#">
+			   <a href="../Inserir_OS/abriros.php">
 				Abrir O.S.
 			  </a>
 			</li>
 			
 			<li>
-			  <a href="#">
+			   <a href="../sair.php">
 				Sair
 			  </a>
 			</li>

@@ -36,6 +36,7 @@ echo $row;
 
 if($row == 1) {
 	$_SESSION['usuario'] = $usuario;
+	$_SESSION['senha'] = $senha;
 	header('Location: tabela/index.php');
 	exit();
 } else {
