@@ -31,12 +31,19 @@ if($data_prevista < $hoje){
       mysqli_close($link);
 }
 
+$sql2 = $link->query("SELECT * FROM os WHERE numero_os='$numero_os'");
+if(mysqli_num_rows($sql2) > 0){
+      echo "New record created successfully";
+	      header('Location: erro.html');
+	exit();
+}
+
 $sql = "INSERT INTO `os` ( `Nome`, `numero_os`, `previa`, `status`, `color`,`Fechado`,`data_prev`,`tempo_prev`,`data_abert`) VALUES ( '$nome', '$numero_os', '$equipamento', '$status', '$prioridade','1','$data_prev','$tempo_prev','$hoje')";
 $result = mysqli_query($link, $sql);
 if ($result) {
       echo "New record created successfully";
-	  header('Location: salvar.html');
-	  exit();
+	      header('Location: salvar.html');
+	exit();
 } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($link);
 }
