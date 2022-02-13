@@ -144,7 +144,7 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
 							</div>
 
 						</div>	
@@ -183,7 +183,7 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
 							</div>
 
 						</div>	
@@ -222,7 +222,7 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
 							</div>
 
 						</div>	
@@ -261,7 +261,7 @@
 								'.$color.'								
 							</div>
 							<div class="cell">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$dados["id"].'" data-whatevernome="'.$nome.'">Fechar</button>
+								<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
 							</div>
 
 						</div>	
