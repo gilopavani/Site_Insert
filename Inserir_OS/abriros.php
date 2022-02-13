@@ -61,7 +61,7 @@
 		<nav class="main-nav">
 		  <ul>
 			<li>
-			  <a href="index.php">
+			  <a href="../tabela/index.php">
 				O.S. Aberta
 			  </a>
 			</li>
