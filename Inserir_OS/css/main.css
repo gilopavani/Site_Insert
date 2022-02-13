@@ -186,6 +186,49 @@ iframe {
 /*------------------------------------------------------------------
 [ Input ]*/
 
+.data {
+  font-family: Ubuntu-Bold;
+  font-size: 17px;
+  color: #403866;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: end;
+  padding-bottom: 15px;
+
+  width: 100%;
+  display: block;
+}
+
+.hora {
+  height: auto;
+  font-family: Ubuntu-Bold;
+  font-size: 17px;
+  color: #403866;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+
+}
+
+.input1000 {
+  font-family: Ubuntu-Bold;
+  color: #403866;
+  line-height: 1.2;
+  font-size: 18px;
+
+  display: block;
+  width: 100%;
+  background: transparent;
+  height: 62px;
+  padding: 0 20px 0 38px;
+}
+
+.inputcheck{
+  font-family: Ubuntu-Bold;
+  color: #403866;
+  width: 25px;
+  height: 25px;
+}
+
 .wrap-input100 {
   width: 100%;
   position: relative;

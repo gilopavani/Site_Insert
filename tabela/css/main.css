@@ -95,6 +95,10 @@ iframe {
   margin: 0 auto;
 }
 
+#ign {
+  display: block;
+}
+
 .container-table100 {
   width: 100%;
   min-height: 100vh;
@@ -208,6 +212,10 @@ iframe {
 }
 .row .cell:nth-child(6) {
   width: 22%;
+}
+
+.teste {
+  width: 8000px;
 }
 
 /*Row1*/
@@ -673,4 +681,32 @@ iframe {
   }
 
     
+}
+
+
+/*busca*/
+.search {
+  width: 100%;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: fixed;
+  top: 2.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

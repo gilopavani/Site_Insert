@@ -111,6 +111,24 @@
 						<span class="focus-input100"></span>
 					</div>
 
+					<b class="data">Data de saida</b>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Data é necessário">
+						<input class="input100" type="date" name="date" placeholder="date">
+						<span class="focus-input100"></span>
+					</div>
+						
+					<label for="chkPassport">
+						<input class="inputcheck" id="chkPassport" type="checkbox">
+					</label>
+					<b class="hora" >Hora de saida</b>
+					
+					<span class="focus-input100"></span>
+					<div class="wrap-input100 validate-input m-b-16" id="dvPassport" style="display: none">
+						<div class="wrap-input100 validate-input m-b-16" id="txtPassportNumber" >
+							<input class="input1000" type="time" name="time">
+						</div>
+					</div>
+
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Prioridade é necessário">
 						<select class="input100" type="text" name="prioridade" placeholder="Prioridade">
 							<option value="1" selected>Baixa</option>
@@ -154,6 +172,7 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+	<script src="checkbox.js"></script>
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 	
