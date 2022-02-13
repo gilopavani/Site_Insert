@@ -77,7 +77,7 @@
 			  </a>
 			</li>
 			<li>
-			  <a href="../Inserir_OS/abriros.html">
+			  <a href="../Inserir_OS/abriros.php">
 				Abrir O.S.
 			  </a>
 			</li>
