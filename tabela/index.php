@@ -136,7 +136,7 @@ window.setTimeout("location.reload()", 4200);
 
 }
 
-setInterval(alarme,600000);
+setInterval(alarme,5000);
 	}
 }
 start(1);
