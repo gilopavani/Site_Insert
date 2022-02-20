@@ -11,6 +11,10 @@
 	$consulta = "SELECT * FROM os";
 
 	$con = $link->query($consulta) or die ($link->error);
+
+
+
+
 while($dados = $con->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
@@ -38,7 +42,11 @@ while($dados = $con->fetch_array()){
 						}
 							
 				}
-	
+
+
+
+
+
 
 ?>
 <!DOCTYPE html>
@@ -71,6 +79,8 @@ while($dados = $con->fetch_array()){
 <!--=======================================busca========================================================-->
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css'>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
 
 
 
@@ -133,7 +143,10 @@ start(<?php$tempo?>);
 
 
 </script>
+
 		<!--=========================Menu======================================================================-->
+		
+</div>
 		<div id="menu" class="">
 		<nav class="main-nav">
 		  <ul>
@@ -161,10 +174,12 @@ start(<?php$tempo?>);
 		<div class="limiter">
 			<div class="container-table100">
 				<div class="wrap-table100">
+						
 						<form action = "fecha.php" method="POST">
+						
 						<div class="table" id="resultado">
 							
-							
+						
 						</div>
 						</form>
 				</div>
