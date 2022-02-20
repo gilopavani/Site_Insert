@@ -14,7 +14,7 @@
 
 
 
-
+$tempo = 0;
 while($dados = $con->fetch_array()){
 							$nome = $dados["Nome"] ;
 							$numero = $dados["numero_os"] ;
@@ -24,11 +24,11 @@ while($dados = $con->fetch_array()){
 							$id = $dados["id"];
 							$dt_atual = date("Y-m-d");
 							
-							$tempo = 0;
+							
 							
 					
 						if($dados["Fechado"] == 1 ){
-							if($dt_atual >= $previa){
+							if($dt_atual > $previa){
 								$fecha = $id ;
 								$tempo = 1 ;
 								$color = intval($color);
@@ -42,8 +42,6 @@ while($dados = $con->fetch_array()){
 							
 						}
 						
-						echo $tempo;
-						echo "<br>";
 							
 				}
 
