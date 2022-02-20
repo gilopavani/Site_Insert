@@ -28,20 +28,22 @@ while($dados = $con->fetch_array()){
 							
 					
 						if($dados["Fechado"] == 1 ){
-							if($dt_atual > $previa){
+							if($dt_atual >= $previa){
 								$fecha = $id ;
 								$tempo = 1 ;
 								$color = intval($color);
 								if($color < 4){
 									$color = $color + 1 ;
 									$sql = "UPDATE `os` SET `color` = $color WHERE `os`.`id` = $fecha";
-									echo $tempo;
-									echo "<br>";
+									
 									$result = mysqli_query($link, $sql);
 								}
 							}							
 							
 						}
+						
+						echo $tempo;
+						echo "<br>";
 							
 				}
 
