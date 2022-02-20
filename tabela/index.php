@@ -34,7 +34,7 @@ while($dados = $con->fetch_array()){
 								if($color < 4){
 									$color = $color + 1 ;
 									$sql = "UPDATE `os` SET `color` = $color WHERE `os`.`id` = $fecha";
-									$tempo = 1 ;
+									$tempo = 1;
 									$result = mysqli_query($link, $sql);
 								}
 							}							
@@ -106,7 +106,7 @@ while($dados = $con->fetch_array()){
 <audio id "audio" src="alert.mp3"></audio>
 <script>
 
-var tem = <?php$tempo?> ;
+var tem = <?php echo $tempo; ?> ;
 function start(temp){
 	var tempo = temp ;
 	if(tempo == "1"){
