@@ -30,12 +30,13 @@ while($dados = $con->fetch_array()){
 						if($dados["Fechado"] == 1 ){
 							if($dt_atual > $previa){
 								$fecha = $id ;
+								$tempo = 1 ;
 								$color = intval($color);
 								if($color < 4){
 									$color = $color + 1 ;
 									$sql = "UPDATE `os` SET `color` = $color WHERE `os`.`id` = $fecha";
-									$tempo = "<script> var global = '1' </script>";
-									echo $tempo ;
+									echo $tempo;
+									echo "<br>";
 									$result = mysqli_query($link, $sql);
 								}
 							}							
@@ -140,7 +141,8 @@ window.setTimeout("location.reload()", 4200);
 setInterval(alarme,5000);
 	}
 }
-start(tem);
+var t = <?php echo $tempo; ?>;
+start(t);
 
 
 </script>
