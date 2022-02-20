@@ -108,10 +108,10 @@ while($dados = $con->fetch_array()){
 <audio id "audio" src="alert.mp3"></audio>
 <script>
 
-var tem = global ;
+
 function start(temp){
 	var tempo = temp ;
-	if(tempo == "1"){
+	if(tempo == 1){
 function alarme(numero){	
 var num = numero ;
 const Toast = Swal.mixin({
