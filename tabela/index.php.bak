@@ -107,7 +107,39 @@ while($dados = $con->fetch_array()){
 <script>
 
 
+function start(temp){
+	var tempo = temp ;
+	if(tempo == 1){
+function alarme(numero){	
+var num = numero ;
+const Toast = Swal.mixin({
+  toast: true,
+  position: "top-center",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer)
+    toast.addEventListener("mouseleave", Swal.resumeTimer)
+  }
+})
 
+Toast.fire({
+  icon: "warning",
+  title: " Atenção O.S Esta Atrasada !!! "
+})
+
+const audio = document.querySelector('audio');
+	audio.play();
+
+window.setTimeout("location.reload()", 4200);	
+
+}
+
+setInterval(alarme,600000);
+	}
+}
+start(<?php$tempo?>);
 
 
 </script>
