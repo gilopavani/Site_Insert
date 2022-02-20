@@ -5,10 +5,11 @@ $tabela = "lista-os";
 $usuario = "root";
 $senha = "";
 */
-$host = "sql10.freemysqlhosting.net";
-$tabela = "sql10471383";
-$usuario = "sql10471383";
-$senha = "XZBAD7LNrR";
+$host = "us-cdbr-east-05.cleardb.net";
+$tabela = "heroku_3166029c31857d1";
+$usuario = "b7ee025ae16aa3";
+$senha = "3a697031";
+
 // Create connection
 $link = mysqli_connect ($host, $usuario, $senha, $tabela);
 
