@@ -11,7 +11,33 @@
 	$consulta = "SELECT * FROM os";
 
 	$con = $link->query($consulta) or die ($link->error);
-
+while($dados = $con->fetch_array()){
+							$nome = $dados["Nome"] ;
+							$numero = $dados["numero_os"] ;
+							$status= $dados["status"] ;
+							$previa= $dados["data_prev"] ; 
+							$color = $dados["color"] ;
+							$id = $dados["id"];
+							$dt_atual = date("Y-m-d");
+							
+							$tempo ;
+							
+					
+						if($dados["Fechado"] == 1 ){
+							if($dt_atual > $previa){
+								$fecha = $id ;
+								$color = intval($color);
+								if($color < 4){
+									$color = $color + 1 ;
+									$sql = "UPDATE `os` SET `color` = $color WHERE `os`.`id` = $fecha";
+									$tempo = 1 ;
+									$result = mysqli_query($link, $sql);
+								}
+							}							
+							
+						}
+							
+				}
 	
 
 ?>
@@ -67,6 +93,46 @@
 
 </head>
 <body>
+<audio id "audio" src="alert.mp3"></audio>
+<script>
+
+
+function start(temp){
+	var tempo = temp ;
+	if(tempo == 1){
+function alarme(numero){	
+var num = numero ;
+const Toast = Swal.mixin({
+  toast: true,
+  position: "top-center",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.addEventListener("mouseenter", Swal.stopTimer)
+    toast.addEventListener("mouseleave", Swal.resumeTimer)
+  }
+})
+
+Toast.fire({
+  icon: "warning",
+  title: " Atenção O.S Esta Atrasada !!! "
+})
+
+const audio = document.querySelector('audio');
+	audio.play();
+
+window.setTimeout("location.reload()", 4200);	
+
+}
+
+setInterval(alarme,600000);
+	}
+}
+start(<?php$tempo?>);
+
+
+</script>
 		<!--=========================Menu======================================================================-->
 		<div id="menu" class="">
 		<nav class="main-nav">
