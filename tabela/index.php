@@ -109,7 +109,7 @@ while($dados = $con->fetch_array()){
 var tem = <?php echo $tempo; ?> ;
 function start(temp){
 	var tempo = temp ;
-	if(tempo == "1"){
+	if(tempo == 1){
 function alarme(numero){	
 var num = numero ;
 const Toast = Swal.mixin({
