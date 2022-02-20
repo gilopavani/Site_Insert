@@ -24,7 +24,7 @@ while($dados = $con->fetch_array()){
 							$id = $dados["id"];
 							$dt_atual = date("Y-m-d");
 							
-							$tempo = "0";
+							$tempo = 0;
 							
 					
 						if($dados["Fechado"] == 1 ){
@@ -34,7 +34,7 @@ while($dados = $con->fetch_array()){
 								if($color < 4){
 									$color = $color + 1 ;
 									$sql = "UPDATE `os` SET `color` = $color WHERE `os`.`id` = $fecha";
-									$tempo = "1" ;
+									$tempo = 1 ;
 									$result = mysqli_query($link, $sql);
 								}
 							}							
@@ -106,7 +106,7 @@ while($dados = $con->fetch_array()){
 <audio id "audio" src="alert.mp3"></audio>
 <script>
 
-
+var tem = <?php$tempo?> ;
 function start(temp){
 	var tempo = temp ;
 	if(tempo == "1"){
@@ -139,7 +139,7 @@ window.setTimeout("location.reload()", 4200);
 setInterval(alarme,5000);
 	}
 }
-start(<?php$tempo?>);
+start(tem);
 
 
 </script>

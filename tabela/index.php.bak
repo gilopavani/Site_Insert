@@ -24,7 +24,7 @@ while($dados = $con->fetch_array()){
 							$id = $dados["id"];
 							$dt_atual = date("Y-m-d");
 							
-							$tempo = 0;
+							$tempo = "0";
 							
 					
 						if($dados["Fechado"] == 1 ){
@@ -34,7 +34,7 @@ while($dados = $con->fetch_array()){
 								if($color < 4){
 									$color = $color + 1 ;
 									$sql = "UPDATE `os` SET `color` = $color WHERE `os`.`id` = $fecha";
-									$tempo = 1 ;
+									$tempo = "1" ;
 									$result = mysqli_query($link, $sql);
 								}
 							}							
@@ -109,7 +109,7 @@ while($dados = $con->fetch_array()){
 
 function start(temp){
 	var tempo = temp ;
-	if(tempo == 1){
+	if(tempo == "1"){
 function alarme(numero){	
 var num = numero ;
 const Toast = Swal.mixin({
