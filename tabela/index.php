@@ -24,7 +24,7 @@ while($dados = $con->fetch_array()){
 							$id = $dados["id"];
 							$dt_atual = date("Y-m-d");
 							
-							$tempo ;
+							$tempo = 0;
 							
 					
 						if($dados["Fechado"] == 1 ){
@@ -139,7 +139,7 @@ window.setTimeout("location.reload()", 4200);
 setInterval(alarme,5000);
 	}
 }
-start(1);
+start(<?php$tempo?>);
 
 
 </script>
