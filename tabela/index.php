@@ -12,43 +12,7 @@
 
 	$con = $link->query($consulta) or die ($link->error);
 
-
-
-$tempo = 0;
-while($dados = $con->fetch_array()){
-							$nome = $dados["Nome"] ;
-							$numero = $dados["numero_os"] ;
-							$status= $dados["status"] ;
-							$previa= $dados["data_prev"] ; 
-							$color = $dados["color"] ;
-							$id = $dados["id"];
-							$dt_atual = date("Y-m-d");
-							
-							
-							
-					
-						if($dados["Fechado"] == 1 ){
-							if($dt_atual > $previa){
-								$fecha = $id ;
-								$tempo = 1 ;
-								$color = intval($color);
-								if($color < 4){
-									$color = $color + 1 ;
-									$sql = "UPDATE `os` SET `color` = $color WHERE `os`.`id` = $fecha";
-									
-									$result = mysqli_query($link, $sql);
-								}
-							}							
-							
-						}
-						
-							
-				}
-
-
-
-
-
+	
 
 ?>
 <!DOCTYPE html>
@@ -72,6 +36,7 @@ while($dados = $con->fetch_array()){
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="css1/bootstrap.min.css" rel="stylesheet">
 <!--===============================================================================================-->
 
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css'>
@@ -80,7 +45,6 @@ while($dados = $con->fetch_array()){
 
 <!--=======================================busca========================================================-->
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.css'>
-
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
 
@@ -105,10 +69,44 @@ while($dados = $con->fetch_array()){
 
 </head>
 <body>
+<?php
+$tempo = 0;
+while($dados = $con->fetch_array()){
+							$nome = $dados["Nome"] ;
+							$numero = $dados["numero_os"] ;
+							$status= $dados["status"] ;
+							$previa= $dados["data_prev"] ; 
+							$color = $dados["color"] ;
+							$id = $dados["id"];
+							$dt_atual = date("Y-m-d");
+							$fech = $dados["Fechado"] ;
+							
+							
+					
+						if($dados["Fechado"] == 1 ){
+							
+							if($dt_atual > $previa){
+								$tempo = 1 ;
+								$fecha = $id ;
+								
+								$color = intval($color);
+								if($color < 4){
+									$color = $color + 1 ;
+									$sql = "UPDATE `os` SET `color` = $color WHERE `os`.`id` = $fecha";
+									
+
+									$result = mysqli_query($link, $sql);
+								}
+							
+							}						
+							
+						}
+						
+						
+				}
+?>
 <audio id "audio" src="alert.mp3"></audio>
 <script>
-
-
 function start(temp){
 	var tempo = temp ;
 	if(tempo == 1){
@@ -148,8 +146,6 @@ start(t);
 </script>
 
 		<!--=========================Menu======================================================================-->
-		
-</div>
 		<div id="menu" class="">
 		<nav class="main-nav">
 		  <ul>
@@ -178,19 +174,46 @@ start(t);
 			<div class="container-table100">
 				<div class="wrap-table100">
 						
-						<form action = "fecha.php" method="POST">
-						
 						<div class="table" id="resultado">
 							
-						
+							
 						</div>
-						</form>
+						
 				</div>
 			</div>
 		</div>
 	</div>
 
-
+<!--=======================================modal========================================================-->
+	<form action = "fecha.php" method="POST">
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">O.S - </h5>
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+		  <div class="modal-body">
+			  <div class="form-group">
+				<label for="recipient-name" class="col-form-label"><h6>O.S:</h6></label>
+				<input type="text" class="form-control " id="recipient-name" name="id">
+			  </div>
+			  <div class="form-group">
+				<label for="recipient-name" class="col-form-label"><h6>Tecnico:</h6></label>
+				<input type="text" class="form-control " placeholder="Digite o número nome do Tecnico" id="recipient-tecnico" name = "tecnico">
+			  </div>
+			  
+			  <button type="button" class="btn btn-danger" data-dismiss="modal"  >Cancela</button>
+			 
+			  <button type="submit" class="btn btn-success" >Confirmar</button>
+			  
+			</form>
+		  </div>
+		</div>
+	  </div>
+	</div>
 
 	
 
@@ -209,6 +232,21 @@ start(t);
 	
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 	<script type="text/javascript" src="personalizado.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js1/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever')// Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('O.S - ' + recipient )
+  modal.find('#recipient-name').val(recipient)
+})
+</script>
 
 
 </body>

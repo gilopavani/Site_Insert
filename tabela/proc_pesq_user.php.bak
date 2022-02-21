@@ -68,7 +68,7 @@ if(($resultado_user) AND ($resultado_user->num_rows != 0 )){
 					</div>
 					
 					<div class="cell">
-						<button type="submit" class="button-9" name = "id" value = '.$row_user["id"].' role="button" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$row_user["id"].'">FECHAR</button>
+						<button type="submit" class="button-9" name = "id" value = '.$row_user["id"].' role="button" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$id.'">FECHAR</button>
 					</div>
 					
 				</div>	

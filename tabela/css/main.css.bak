@@ -65,7 +65,7 @@ input {
 
 textarea {
   display: block;
-  
+  outline: none;
 }
 
 textarea:focus, input:focus {
