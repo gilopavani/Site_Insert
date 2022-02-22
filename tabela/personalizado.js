@@ -1,15 +1,10 @@
 $(function(){
-	var temp = 0;
-		setInterval(myTimer, 1000);
 
-	function myTimer() {
-		if($("#pesquisa").val()== ''){
-			$.post('table.php', function(teste){
-				//Mostra dentro da ul os resultado obtidos 
-				$("#resultado").html(teste);
-			});
-		}
-		
+	if($("#pesquisa").val()== ''){
+		$.post('table.php', function(teste){
+			//Mostra dentro da ul os resultado obtidos 
+			$("#resultado").html(teste);
+		});
 	}
 
 
