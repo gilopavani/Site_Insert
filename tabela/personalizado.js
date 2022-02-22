@@ -1,10 +1,23 @@
 $(function(){
-
-	if($("#pesquisa").val()== ''){
-		$.post('table.php', function(teste){
-			//Mostra dentro da ul os resultado obtidos 
-			$("#resultado").html(teste);
-		});
+	var temp = 0;
+		setInterval(myTimer, 60000);
+		
+		if($("#pesquisa").val()== ''){
+			$.post('table.php', function(teste){
+				//Mostra dentro da ul os resultado obtidos 
+				$("#resultado").html(teste);
+			});
+		}
+		
+	function myTimer() {
+		
+		if($("#pesquisa").val()== ''){
+			$.post('table.php', function(teste){
+				//Mostra dentro da ul os resultado obtidos 
+				$("#resultado").html(teste);
+			});
+		}
+		
 	}
 
 
