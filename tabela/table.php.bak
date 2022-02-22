@@ -58,7 +58,7 @@ if($dados["Fechado"] == 1 ){
 	
 echo '
 <div class="row'.$color.'">
-	<div class="cell" data-title="Full Name">
+	<div class="cell" data-title="Full Name" id = "atual">
 		'.$nome.'
 	</div>
 	<div class="cell" data-title="Age">
@@ -74,7 +74,7 @@ echo '
 		'.$color.'								
 	</div>
 	<div class="cell">
-		<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
+		<button type="button" class="button-9" name = "id" value = '.$id.' role="button" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$id.'">FECHAR</button>
 	</div>
 
 </div>	
@@ -113,7 +113,7 @@ echo '
 		'.$color.'								
 	</div>
 	<div class="cell">
-		<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
+		<button type="button" class="button-9" role="button" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$id.'">FECHAR</button>
 	</div>
 
 </div>	
@@ -152,7 +152,7 @@ echo '
 		'.$color.'								
 	</div>
 	<div class="cell">
-		<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
+		<button type="button" class="button-9" name = "id" value = '.$id.' role="button" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$id.'">FECHAR</button>
 	</div>
 
 </div>	
@@ -191,7 +191,7 @@ echo '
 		'.$color.'								
 	</div>
 	<div class="cell">
-		<button type = "submit" class="button-9" name = "id" value = '.$id.' role="button">FECHAR</button>
+		<button type="button" class="button-9" name = "id" value = '.$id.' role="button" data-toggle="modal" data-target="#exampleModal" data-whatever="'.$id.'">FECHAR</button>
 	</div>
 
 </div>	

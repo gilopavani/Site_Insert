@@ -58,7 +58,7 @@ if($dados["Fechado"] == 1 ){
 	
 echo '
 <div class="row'.$color.'">
-	<div class="cell" data-title="Full Name">
+	<div class="cell" data-title="Full Name" >
 		'.$nome.'
 	</div>
 	<div class="cell" data-title="Age">
