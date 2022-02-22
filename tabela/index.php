@@ -136,7 +136,7 @@ window.setTimeout("location.reload()", 4200);
 
 }
 
-setInterval(alarme,10000);
+setInterval(alarme,600000);
 	}
 }
 var t = <?php echo $tempo; ?>;
